@@ -1,0 +1,386 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+    flex-wrap: nowrap; 
+    padding-right: 20px;
+    white-space: nowrap; 
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem; 
+    text-transform: capitalize;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+
+/* Welcome Header styling */
+.welcome-header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    background-color: #ff6b6b;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 1.8rem;
+}
+
+.edit-interests {
+    color: #007bff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Dashboard Section */
+.dashboard {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.dashboard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.activity-link {
+    color: #007bff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+
+/* Courses Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Container chung cho streak */
+.streak-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Icon và thông tin streak */
+.streak-info {
+    display: flex;
+    align-items: center;
+}
+
+.flame-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.weeks-count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-streak {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Vòng tròn tiến trình */
+.progress-container {
+    display: flex;
+    align-items: center;
+}
+
+.progress-circle {
+    margin-right: 15px;
+}
+
+svg circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+/* Thông tin chi tiết về tiến trình */
+.progress-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.progress-details span {
+    margin-bottom: 5px;
+}
+
+/* Đường link xem toàn bộ hoạt động */
+.activity-link {
+    color: #6200EE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Section Title */
+.courses h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #007bff;
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.my-learning {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Course List */
+.course-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.course-item {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.course-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.play-btn {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Scroll Styling for Overflow */
+.course-list {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4;
+}
+
+.course-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.course-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+/* Recommendations Section */
+.recommendations {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.recommendation-item {
+    background-color: white;
+    padding: 20px;
+    width: 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.recommendation-item:hover {
+    transform: translateY(-5px);
+}
+
+.recommendation-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recommendation-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.recommendation-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Personalize Section */
+.personalize-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.personalize-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.personalize-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.personalize-btn {
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.personalize-btn:hover {
+    background-color: #e65c00;
+}
